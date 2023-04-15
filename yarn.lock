@@ -19,6 +19,30 @@
   dependencies:
     tslib "^2.4.0"
 
+"@types/node@18.15.11":
+  version "18.15.11"
+  resolved "https://registry.npmjs.org/@types/node/-/node-18.15.11.tgz"
+  integrity sha512-E5Kwq2n4SbMzQOn6wnmBjuK9ouqlURrcZDVfbo9ftDDTFt3nk7ZKK4GMOzoYgnpQJKcxwQw+lGaBvvlMo0qN/Q==
+
+"@types/prop-types@*":
+  version "15.7.5"
+  resolved "https://registry.npmjs.org/@types/prop-types/-/prop-types-15.7.5.tgz"
+  integrity sha512-JCB8C6SnDoQf0cNycqd/35A7MjcnK+ZTqE7judS6o7utxUCg6imJg3QK2qzHKszlTjcj2cn+NwMB2i96ubpj7w==
+
+"@types/react@18.0.35":
+  version "18.0.35"
+  resolved "https://registry.npmjs.org/@types/react/-/react-18.0.35.tgz"
+  integrity sha512-6Laome31HpetaIUGFWl1VQ3mdSImwxtFZ39rh059a1MNnKGqBpC88J6NJ8n/Is3Qx7CefDGLgf/KhN/sYCf7ag==
+  dependencies:
+    "@types/prop-types" "*"
+    "@types/scheduler" "*"
+    csstype "^3.0.2"
+
+"@types/scheduler@*":
+  version "0.16.3"
+  resolved "https://registry.npmjs.org/@types/scheduler/-/scheduler-0.16.3.tgz"
+  integrity sha512-5cJ8CB4yAx7BH1oMvdU0Jh9lrEXyPkar6F9G/ERswkCuvP4KQZfZkSjcMbAICCpQTN4OuZn8tz0HiKv9TGZgrQ==
+
 busboy@1.6.0:
   version "1.6.0"
   resolved "https://registry.npmjs.org/busboy/-/busboy-1.6.0.tgz"
@@ -35,6 +59,11 @@ client-only@0.0.1:
   version "0.0.1"
   resolved "https://registry.npmjs.org/client-only/-/client-only-0.0.1.tgz"
   integrity sha512-IV3Ou0jSMzZrd3pZ48nLkT9DA7Ag1pnPzaiQhpW7c3RbcqqzvzzVu+L8gfqMp/8IM2MQtSiqaCxrrcfu8I8rMA==
+
+csstype@^3.0.2:
+  version "3.1.2"
+  resolved "https://registry.npmjs.org/csstype/-/csstype-3.1.2.tgz"
+  integrity sha512-I7K1Uu0MBPzaFKg4nI5Q7Vs2t+3gWWW648spaF+Rg7pI9ds18Ugn+lvg4SHczUdKlHI5LWBXyqfS8+DufyBsgQ==
 
 "js-tokens@^3.0.0 || ^4.0.0":
   version "4.0.0"
