@@ -3,31 +3,66 @@ import { Icon } from "@iconify/react";
 type Props = {
   disableShadow?: boolean;
   disabled?: boolean;
-  variant?: "text" | "button",
-  size?: "sm" | "md" | "lg",
-  startIcon?: JSX.Element,
-  endIcon?: JSX.Element
-}
+  variant?: "text" | "button";
+  size?: "sm" | "md" | "lg";
+  startIcon?: string;
+  endIcon?: string;
+  color?: "default" | "primary" | "secondary" | "danger";
+};
 
-export default function Button({ disableShadow, disabled, variant, size, startIcon, endIcon,}: Props) {
+export default function Button({
+  disableShadow,
+  disabled,
+  variant,
+  size,
+  startIcon,
+  endIcon,
+  color,
+}: Props) {
   return (
     <button
       disabled={disabled ? true : false}
       style={{
-        backgroundColor: disabled ? "#e0e0e0" : "blue",
-        padding: "9px 16px",
+        background:
+          variant === "text"
+            ? "none"
+            : disabled
+            ? "#e0e0e0"
+            : color === "default"
+            ? "#e0e0e0"
+            : color === "secondary"
+            ? "#465b64"
+            : color === "danger"
+            ? "#d3302f"
+            : "#2961ff",
+        padding:
+          size === "sm"
+            ? "9px 16px"
+            : size === "md"
+            ? "11px 18px"
+            : "13px 20px",
         borderRadius: "5px",
-        color: disabled ? "#9e9e9e" : "white",
+        color: disabled || variant === "text" ? "#9e9e9e" : "white",
         border: "none",
-        boxShadow: disableShadow ? "none" : "-1px 10px 17px -11px rgba(0,0,0,0.75)",
+        boxShadow:
+          variant === "text"
+            ? "none"
+            : disableShadow
+            ? "none"
+            : "-1px 10px 17px -11px rgba(0,0,0,0.75)",
         fontSize: "15px",
         display: "flex",
         alignItems: "center",
+        flexDirection: !startIcon ? "row-reverse" : "row",
         gap: "2px",
-        cursor: disabled ? "default" : "pointer"
+        cursor: disabled ? "default" : "pointer",
       }}
     >
-      <Icon icon="ic:sharp-add-shopping-cart" />
+      {variant === "text" || (!startIcon && !endIcon) ? (
+        ""
+      ) : (
+        <Icon icon={startIcon || endIcon} />
+      )}
       Button
     </button>
   );
